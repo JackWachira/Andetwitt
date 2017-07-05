@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 {% block container-fluid %}
+<div class="row"><a class="btn">Refresh All</a></div>
 <div class="row">
     <div class="col s4">
-        {% include "tweet.html" with data=data.andela title="@Andela" %}
+        {% include "tweet.html" with data=andela title="@Andela" %}
     </div>
-     <div class="col s4">
-        {% include "tweet.html" with data=data.kenya title="@Andela_Kenya" %}
+    <div class="col s4">
+        {% include "tweet.html" with data=kenya title="@Andela_Kenya" %}
     </div>
-     <div class="col s4">
-         {% include "tweet.html" with data=data.nigeria title="@Andela_Nigeria" %}
+    <div class="col s4">
+         {% include "tweet.html" with data=nigeria title="@Andela_Nigeria" %}
     </div>
 </div>
     

@@ -10,12 +10,7 @@ def fetch_requests(request):
         andela_data = fetchData('Andela', access_token)
         andela_kenya_data = fetchData('Andela_Kenya', access_token)
         andela_nigeria_data = fetchData('Andela_Nigeria', access_token)
-        context_data = {
-            'andela': andela_data,
-            'kenya': andela_kenya_data,
-            'nigeria': andela_nigeria_data
-        }
-        return render(request, 'index.html', context={'data': context_data})
+        return render(request, 'index.html', context={'andela': andela_data, 'kenya': andela_kenya_data, 'nigeria': andela_nigeria_data})
 
 
 def getAccessToken():
